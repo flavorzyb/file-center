@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <head version="2.5">
-    <project name="user.shiwanimg.cn">
-        <localpath watch="/data0/htdocs/user.shiwanimg.cn">
-            <remote ip="192.168.10.249" module="user.shiwanimg.cn"/>
-            <remote ip="192.168.10.250" module="user.shiwanimg.cn"/>
-            <remote ip="61.135.173.70" module="user.shiwanimg.cn"/>
-            <remote ip="61.135.173.71" module="user.shiwanimg.cn"/>
+    <project name="my project">
+        <localpath watch="/data0/project">
+            <remote ip="192.168.1.101" module="module_name"/>
+            <remote ip="192.168.1.102" module="module_name"/>
         </localpath>
         <rsync>
             <bin path="/usr/bin/rsync"/>
