@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <head version="2.5">
-    <project name="user.shiwanimg.cn">
+    <project name="project1">
         <localpath watch="/home/yanbin/Zend">
             <remote ip="192.168.1.112" module="filecenter"/>
             <remote ip="192.168.1.113" module="filecenter"/>
@@ -28,7 +28,7 @@
         </inotify>
     </project>
     
-    <project name="www.shiwanimg.cn">
+    <project name="project2">
         <localpath watch="/home/yanbin/log/ss">
             <remote ip="192.168.1.112" module="filecenter"/>
             <remote ip="192.168.1.113" module="filecenter"/>
