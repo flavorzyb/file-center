@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<head version="2.5">
+    <project name="user.shiwanimg.cn">
+        <localpath watch="/data0/htdocs/user.shiwanimg.cn">
+            <remote ip="192.168.10.249" module="user.shiwanimg.cn"/>
+            <remote ip="192.168.10.250" module="user.shiwanimg.cn"/>
+            <remote ip="61.135.173.70" module="user.shiwanimg.cn"/>
+            <remote ip="61.135.173.71" module="user.shiwanimg.cn"/>
+        </localpath>
+        <rsync>
+            <bin path="/usr/bin/rsync"/>
+            <commonParams params="-Rauvz"/>
+            <auth user="web" passwordfile="/home/web/.rsyncpass/web.pass"/>
+            <timeout time="100"/>
+        </rsync>
+        <inotify>
+            <MOVED_TO start="true"/>
+            <DELETE_SELF, start="true"/>
+            <MOVE_SELF start="true"/>
+            <DIR_CREATE start="true"/>
+            <DIR_DELETE start="true"/>
+            <DIR_MOVED start="true"/>
+        </inotify>
+    </project>
+    <errorlog path="/data1/filecenter/filecenter_error.log"/>
+    <logpath path="/data1/filecenter"/>
+    <redolog path="/data1/filecenter/filecenter_redo.log"/>
+    <user name="web" />
+</head>
