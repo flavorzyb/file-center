@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<head version="2.5">
+    <project name="user.shiwanimg.cn">
+        <localpath watch="/home/yanbin/Zend">
+            <remote ip="192.168.1.112" module="filecenter"/>
+            <remote ip="192.168.1.113" module="filecenter"/>
+        </localpath>
+        <rsync>
+            <bin path="/usr/bin/rsync"/>
+            <commonParams params="-Rauvz"/>
+            <auth user="web" passwordfile="/home/yanbin/.rsyncpass/web.pass"/>
+            <userDefinedPort port="873"/>
+            <timeout time="100"/>
+            <exclude expression=".svn"></exclude>
+            <exclude expression="*.php"></exclude>
+            <ssh start="false"/>
+        </rsync>
+        <inotify>
+            <MODIFY start="true"/>
+            <DELETE start="true"/>
+            <CREATE start="true"/>
+            <MOVE start="true"/>
+            <DELETE_SELF, start="true"/>
+            <MOVE_SELF start="true"/>
+            <DIR_CREATE start="true"/>
+            <DIR_DELETE start="true"/>
+            <DIR_MOVED start="true"/>
+        </inotify>
+    </project>
+    
+    <project name="www.shiwanimg.cn">
+        <localpath watch="/home/yanbin/log/ss">
+            <remote ip="192.168.1.112" module="filecenter"/>
+            <remote ip="192.168.1.113" module="filecenter"/>
+        </localpath>
+        <rsync>
+            <commonParams params="-Rauvz"/>
+            <auth user="web" passwordfile="/home/yanbin/.rsyncpass/web.pass"/>
+            <userDefinedPort port="873"/>
+            <timeout time="100"/>
+            <ssh start="false"/>
+        </rsync>
+        <inotify>
+           <MODIFY start="true"/>
+            <DELETE start="true"/>
+            <CREATE start="true"/>
+            <MOVE start="true"/>
+            <DELETE_SELF, start="true"/>
+            <MOVE_SELF start="true"/>
+            <DIR_CREATE start="true"/>
+            <DIR_DELETE start="true"/>
+            <DIR_MOVED start="true"/>
+        </inotify>
+    </project>
+    <errorlog path="/home/yanbin/log/filecenter_error.log"/>
+    <logpath path="/home/yanbin/log"/>
+    <redolog path="/home/yanbin/log/filecenter_redo.log"/>
+    <user name="yanbin" />
+</head>
